@@ -61,7 +61,7 @@ Naturally, to see where your application is using the most CPU, you'll need to s
 
 ```
 while sleep 1; do
-    curl -s localhost:8888 &>/dev/null && echo -e "\e[1A\e[KApplication ran at $(date '+%F %H:%M:%S')"
+    curl -s localhost:8888 &>/dev/null && echo -e "\e[1A\e[KTraffic sent to application at $(date '+%F %H:%M:%S')"
 done
 ```
 
