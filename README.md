@@ -60,7 +60,9 @@ While [_N|Solid_ Documentation](https://docs.nodesource.com/nsolid/4.9/docs#cons
 Naturally, to see where your application is using the most CPU, you'll need to send traffic to the application in one way or another. If an application has unit tests, running them repeatedly would be a good place to start. For the sake the example application provided with this project, you can run it repeatedly with the following command:
 
 ```
-curl -s localhost:8888 &>/dev/null && echo -e "\e[1A\e[KApplication ran at $(date '+%F %H:%M:%S')"
+while sleep 1; do
+    curl -s localhost:8888 &>/dev/null && echo -e "\e[1A\e[KApplication ran at $(date '+%F %H:%M:%S')"
+done
 ```
 
 ### Create your first CPU Profile
